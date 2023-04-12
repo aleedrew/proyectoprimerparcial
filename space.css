@@ -4,11 +4,12 @@ body {
     background-color: black;
 }
 
-.encabezado-img{
-    background-image: url("D:/VisualStudioCode/proyecto/logo.jpg");
-    height: auto;
-    background-size: cover;
-    display: flex;
+.contenedor img{
+    margin: auto;
+    display: block;
+    width: 200px;
+    height: 200px;
+    position: relative;
 }
 
 /*Fondo del espacio*/

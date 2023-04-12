@@ -1,7 +1,9 @@
 //borde
+//comenzamos dando un tamaño a nuestro borde
 let tileSize = 30;
-let rows = 16; //filas
-let columns = 45; //columnas
+//dividimos entre filas y columnas
+let rows = 15; //filas
+let columns = 40; //columnas
 
 let board;
 let boardWidth = tileSize * columns; 
@@ -24,7 +26,7 @@ let shipImg;
 let shipVelocityX = tileSize; //velocidad de la nave
 
 //aliens
-let alienArray = [];
+let alienArray = []; //cector de los aliens
 let alienWidth = tileSize*2;
 let alienHeight = tileSize;
 let alienX = tileSize;
@@ -37,12 +39,13 @@ let alienCount = 0; //numero de aliens por eliminar
 let alienVelocityX = 1; //velocidad de movimiento de aliens
 
 //disparos
-let bulletArray = [];
+let bulletArray = [];//vector de los disparos
 let bulletVelocityY = -10; //velocidad de los disparos
 
 let score = 0;
 let gameOver = false;
 
+//carga de imagenes
 window.onload = function() {
     board = document.getElementById("board");
     board.width = boardWidth;
@@ -66,7 +69,7 @@ window.onload = function() {
 }
 
 //actualizar
-function update() {
+function update() { //se genera la funcion de las actualizaciones respecto a todas las entidades (disparos, nave, aliens)
     requestAnimationFrame(update);
 
     if (gameOver) {
@@ -200,7 +203,7 @@ function shoot(e) {
     }
 }
 
-//detectar la colision 
+//detectar la colision de la nave con respecto a el movimiento de la nave
 function detectCollision(a, b) {
     return a.x < b.x + b.width &&   
            a.x + a.width > b.x &&   
