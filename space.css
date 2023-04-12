@@ -1,0 +1,21 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+    background-color: black;
+}
+
+.encabezado-img{
+    background-image: url("D:/VisualStudioCode/proyecto/logo.jpg");
+    height: auto;
+    background-size: cover;
+    display: flex;
+}
+
+/*Fondo del espacio*/
+#board {
+    background-image: url("https://img.freepik.com/vector-premium/fondo-super-velocidad-estrellas-borrosas-lineas-luz_370567-1422.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
+}
+
