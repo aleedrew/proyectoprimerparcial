@@ -25,7 +25,7 @@ let ship = {
 let shipImg;
 let shipVelocityX = tileSize; //velocidad de la nave
 
-//aliens
+//variables de los aliens
 let alienArray = []; //cector de los aliens
 let alienWidth = tileSize*2;
 let alienHeight = tileSize;
@@ -38,10 +38,11 @@ let alienColumns = 3;
 let alienCount = 0; //numero de aliens por eliminar
 let alienVelocityX = 1; //velocidad de movimiento de aliens
 
-//disparos
+//variables de los diaparos
 let bulletArray = [];//vector de los disparos
 let bulletVelocityY = -10; //velocidad de los disparos
 
+//variables de score y juego perdido
 let score = 0;
 let gameOver = false;
 
@@ -203,7 +204,7 @@ function shoot(e) {
     }
 }
 
-//detectar la colision de la nave con respecto a el movimiento de la nave
+//detectar la colision de la nave con respecto al movimiento de la nave
 function detectCollision(a, b) {
     return a.x < b.x + b.width &&   
            a.x + a.width > b.x &&   
@@ -211,3 +212,10 @@ function detectCollision(a, b) {
            a.y + a.height > b.y;    
 }
 
+//crear la funcion que arroje un mensaje que se ha perdido
+/*function gameover{
+    if (gameOver) {
+        Swal.fire('El juego ha terminado');
+    }
+}
+*/
