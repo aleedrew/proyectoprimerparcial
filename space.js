@@ -5,12 +5,13 @@ let tileSize = 30;
 let rows = 15; //filas
 let columns = 40; //columnas
 
+//variable del borde
 let board;
-let boardWidth = tileSize * columns; 
+let boardWidth = tileSize * columns; //asigna las columnas y filas ya establecidas
 let boardHeight = tileSize * rows;
 let context;
 
-//nave
+// variable de la nave
 let shipWidth = tileSize*2; //ancho de la nave
 let shipHeight = tileSize*2; //largo de la nave
 let shipX = tileSize * columns/2 - tileSize;
@@ -26,7 +27,7 @@ let shipImg;
 let shipVelocityX = tileSize; //velocidad de la nave
 
 //variables de los aliens
-let alienArray = []; //cector de los aliens
+let alienArray = []; //vector de los aliens
 let alienWidth = tileSize*2;
 let alienHeight = tileSize;
 let alienX = tileSize;
